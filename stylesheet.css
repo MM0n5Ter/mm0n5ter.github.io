@@ -63,28 +63,28 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+body {
+  line-height: 1.5;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+p,
+td,
+th {
+  line-height: 1.5;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 a:focus,
 a:hover {
   color: #f09228;
   text-decoration: none;
-}
-
-body,
-td,
-th,
-tr,
-p {
-  line-height: 1.5;
-}
-
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
 }
 
 strong {
@@ -99,10 +99,46 @@ h2 {
   font-size: 24px;
 }
 
-.papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+ul li {
+  margin-bottom: 12px;
+}
+
+/* --- 页面结构 --- */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0px;
+  border-spacing: 0px;
+}
+
+/* --- Self Intro --- */
+.bio-section {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  width: 100%;
+}
+
+.bio-text {
+  width: 63%;
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+.bio-image {
+  width: 37%; /* 100% - 63% = 37% */
+  padding: 2.5%;
+  box-sizing: border-box;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* 替代了内联样式 */
 }
 
 .name {
@@ -110,8 +146,59 @@ h2 {
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 40px;
+  text-align: center; 
 }
 
+.links {
+  text-align: center;
+}
+
+/* --- pub --- */
+.publications {
+  padding: 0px 20px 6px 20px;
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* --- misc --- */
+.misc {
+  padding: 0px 20px 6px 20px;
+}
+
+.misc p {
+  padding-top: 12px; 
+}
+
+/* --- footer --- */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .bio-section {
+    flex-direction: column-reverse; 
+  }
+
+  .bio-text,
+  .bio-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .bio-image {
+    width: 60%; 
+    margin-bottom: 20px;
+  }
+}
+
+/* --- unuse --- */
+/*
 .one {
   width: 160px;
   height: 160px;
@@ -136,7 +223,4 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
-
-ul li {
-    margin-bottom: 12px;
-}
+*/
